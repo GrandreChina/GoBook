@@ -1,0 +1,922 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F5B6AC14F58EABEB001C30A452D5268 /* JVFloatLabeledTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = F6B644B8ABF02812D83993089180F094 /* JVFloatLabeledTextField.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1E04E83623789E01EB3D44E0864941E5 /* JVFloatLabeledTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4077AB1F49E1F513D99DB33DCD7176F7 /* JVFloatLabeledTextView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1FBFB029C80674D8A9468913B8FF5569 /* SWUtilityButtonTapGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = D7D75FC59E22D5E9C827794D0AA09A52 /* SWUtilityButtonTapGestureRecognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		349E43E0DC50CD1FFC14CFE489152E17 /* SWLongPressGestureRecognizer.h in Headers */ = {isa = PBXBuildFile; fileRef = ADBC812019A8D6B0BA6C748C267D79C4 /* SWLongPressGestureRecognizer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		40AA06B89210999356E0D2E03478E584 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		499E5A5E8F45A0E6FC10DBAB17BBB66E /* NSString+TextDirectionality.h in Headers */ = {isa = PBXBuildFile; fileRef = F505B6E8601BAE63D7D5570DE4D21446 /* NSString+TextDirectionality.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6386CB1F64CDCBAB347BE7E0947E63DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		6AEBC23B44A602A20B8467D2714CAC6A /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */; };
+		740275241245444929B51C5C824BC87F /* JVFloatLabeledTextField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AA5CD8665C0FB1CF88C84BDCBEA6C4 /* JVFloatLabeledTextField-dummy.m */; };
+		75B9287485714913A1A259FEA70BE606 /* NSString+TextDirectionality.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DEE8E536B300FDE6D85A88A262D4F8 /* NSString+TextDirectionality.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		773B18D7343A68211B65EB814FE2E036 /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A3EC514AD080BC432FEDDAA4A26932 /* SWLongPressGestureRecognizer.m */; };
+		782F2C7A8482211B01E1D5D015E552E9 /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = DC932F6D4C2EA73CA99BB3FD4072E0D0 /* SWUtilityButtonTapGestureRecognizer.m */; };
+		7F4BCC738A286E6442D11E1E7E46C94C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		8C3C27FFD4B270EC7E8AF5E7C4051A09 /* JVFloatLabeledTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8258A5B437A766D3FB5B5876FD215685 /* JVFloatLabeledTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C6134384BA59B9B8D5E34CC3861DDAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */; };
+		954A318C9D02501B4B6E907C975B89FA /* SWTableViewCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CA287164577DA6B38C7E50BFCF585F39 /* SWTableViewCell-dummy.m */; };
+		994C714EFB8B3AD6518C9EA43A276402 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */; };
+		A0D8F113C8D9706FC4903C0AE3CB40D8 /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 069CEB8EE1B39A0E10FFBD819E4166C4 /* SWTableViewCell.m */; };
+		A14FA03AF32EB0C04616AD8C1DA2B2EF /* NSMutableArray+SWUtilityButtons.h in Headers */ = {isa = PBXBuildFile; fileRef = 59A5AA0332D1E75EA8CE064A03E4FC81 /* NSMutableArray+SWUtilityButtons.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA913D9430D7B2B0B2CEB8CB3EA33E9B /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FB47201E433504650917163250C0CEF /* SWUtilityButtonView.m */; };
+		BED7D1E5DB4613CE71F1840FC765C681 /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E256B7CB32CD3E34E50F5F55865B702 /* SWCellScrollView.m */; };
+		C8352FBCCC20A58BB0711D149E9355EA /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C596B1CB7A899EC109EC69F24EB9CCF4 /* VPImageCropperViewController.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CFF5177687FB45610BF82F645C636DFA /* JVFloatLabeledTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AE75E1959E96BFFAE7D2D5217C87DDD /* JVFloatLabeledTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0DD0BB9DC8C131D79C13DA779EC1537 /* SWCellScrollView.h in Headers */ = {isa = PBXBuildFile; fileRef = 74A5410E3159F44D1D8A7286CE01716A /* SWCellScrollView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DFA65F590704DF284A70EF1EF8E4EBC5 /* VPImageCropperViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = A832B47293643ED0AAF5912EF4F2226A /* VPImageCropperViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5E68569F24C5289E1041A5FEAFF1F33 /* SWUtilityButtonView.h in Headers */ = {isa = PBXBuildFile; fileRef = 30CDDB875A4EF31DFF0A2CC98BBEDD86 /* SWUtilityButtonView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC17971970F79575A8EA971FD26D5B88 /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 43EBC3DE92B0CC9A7FDF748BB8AC8C6F /* NSMutableArray+SWUtilityButtons.m */; };
+		F231374B661B4C8822B8E070B4C9901E /* SWTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C57A343D6AD5F87AB0326BE5F13FA0E4 /* SWTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB2B729213A29A310A3ECA1C9C8C2BCF /* VPImageCropper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF6C97B17B736F3DA07CE9603F97F6F1 /* VPImageCropper-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0967AE0BA3F859DAA86706B3C4132670 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E2DAAC89F92C5F154DDFF312709BDB3A;
+			remoteInfo = SWTableViewCell;
+		};
+		1CEC308C6CE9D4915D69221DB4831F1A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 266E27D897FD7FD68078059CF4D7455F;
+			remoteInfo = JVFloatLabeledTextField;
+		};
+		9019F8E4CCB699563674A028F9FC0A6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5DF6B2B638BD451921A359066CB9E21;
+			remoteInfo = VPImageCropper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01B5AB97929BA2E132FAA939E9BB4A23 /* AVOSCloudCrashReporting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVOSCloudCrashReporting.h; sourceTree = "<group>"; };
+		051D5156948CD6C99D8DE576F65C81DA /* AVObject+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AVObject+Subclass.h"; sourceTree = "<group>"; };
+		061F5E129D211ED09F2FE0C52A9BBCD4 /* AVIMKeyedConversation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVIMKeyedConversation.h; sourceTree = "<group>"; };
+		069CEB8EE1B39A0E10FFBD819E4166C4 /* SWTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWTableViewCell.m; path = SWTableViewCell/PodFiles/SWTableViewCell.m; sourceTree = "<group>"; };
+		0D00F12612D6789A41162A613808FF4F /* AVConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVConstants.h; sourceTree = "<group>"; };
+		0FA500563D4B2E47E1FE0425F7F998F0 /* AVInstallation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVInstallation.h; sourceTree = "<group>"; };
+		10834806BD7B412BC24F347361FA2C8E /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		1529998480FD065297B734C96F4A596D /* AVCloud.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVCloud.h; sourceTree = "<group>"; };
+		175A31BF0CBF9E7DA42F566474F5FC3E /* AVIMUserOptions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVIMUserOptions.h; sourceTree = "<group>"; };
+		18F38A1EAA9AB08FE0056D65C1F93DEA /* libVPImageCropper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVPImageCropper.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		190BDC51182DC5633F248D533D4F5A60 /* AVIMConversationUpdateBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVIMConversationUpdateBuilder.h; sourceTree = "<group>"; };
+		272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		2CA323B26B5C00C7EC0D3ED1D3E13BB8 /* AVIMVideoMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVIMVideoMessage.h; sourceTree = "<group>"; };
+		30CDDB875A4EF31DFF0A2CC98BBEDD86 /* SWUtilityButtonView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWUtilityButtonView.h; path = SWTableViewCell/PodFiles/SWUtilityButtonView.h; sourceTree = "<group>"; };
+		32AA5CD8665C0FB1CF88C84BDCBEA6C4 /* JVFloatLabeledTextField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JVFloatLabeledTextField-dummy.m"; sourceTree = "<group>"; };
+		35141CDA111D0564F00350D74EC5CF6D /* AVRelation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVRelation.h; sourceTree = "<group>"; };
+		377916D8FA1BB93CB2D5237D6C070678 /* AVAnonymousUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVAnonymousUtils.h; sourceTree = "<group>"; };
+		37DB56D75062CC75FCB0966E1C6E8A8E /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		380D4B8796BFBB175D323229D0D84BB9 /* JVFloatLabeledTextField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JVFloatLabeledTextField-prefix.pch"; sourceTree = "<group>"; };
+		3C288E709D0FD78076ACCB9495DF7DFE /* AVIMMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVIMMessage.h; sourceTree = "<group>"; };
+		3C93D979466A67340EF631EECC275AC0 /* AVOSCloudIM.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVOSCloudIM.h; sourceTree = "<group>"; };
+		3EE9039403C28C4D8C973094EA1FA119 /* AVIMSignature.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVIMSignature.h; sourceTree = "<group>"; };
+		4077AB1F49E1F513D99DB33DCD7176F7 /* JVFloatLabeledTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JVFloatLabeledTextView.m; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextView.m; sourceTree = "<group>"; };
+		43EBC3DE92B0CC9A7FDF748BB8AC8C6F /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSMutableArray+SWUtilityButtons.m"; path = "SWTableViewCell/PodFiles/NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
+		46DEE8E536B300FDE6D85A88A262D4F8 /* NSString+TextDirectionality.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+TextDirectionality.m"; path = "JVFloatLabeledTextField/JVFloatLabeledTextField/NSString+TextDirectionality.m"; sourceTree = "<group>"; };
+		4DA67E920B3C8E3D1A07B1965D11DD55 /* AVLogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVLogger.h; sourceTree = "<group>"; };
+		4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		4FDE2886EECDC0CA3611D1F1014643EF /* AVStatus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVStatus.h; sourceTree = "<group>"; };
+		50C3AC35D077A0666602EB2C2F9B9CC5 /* AVIMConversation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVIMConversation.h; sourceTree = "<group>"; };
+		514797DB67D4AB0BB4A079561544B83B /* AVPush.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVPush.h; sourceTree = "<group>"; };
+		5346112F5117C19B2167093A0F1A09B0 /* libAVOSCloudIM.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libAVOSCloudIM.a; sourceTree = "<group>"; };
+		54AEA457038D9130E0A8073A87C0618C /* VPImageCropper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VPImageCropper-prefix.pch"; sourceTree = "<group>"; };
+		58A385EC159005F9D1DE86F14CE12BF3 /* AVMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVMessage.h; sourceTree = "<group>"; };
+		59A5AA0332D1E75EA8CE064A03E4FC81 /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMutableArray+SWUtilityButtons.h"; path = "SWTableViewCell/PodFiles/NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
+		5C3FCF3A43E8ADB08E681F150FFCBF13 /* AVIMClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVIMClient.h; sourceTree = "<group>"; };
+		5D40C7E311236ADC6AA3F2CF7BF6C9E0 /* AVIMTypedMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVIMTypedMessage.h; sourceTree = "<group>"; };
+		637C6C2CE5CD7142CC133CAB536A50E6 /* AVIMLocationMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVIMLocationMessage.h; sourceTree = "<group>"; };
+		63E0C27D201FF0358C9729E68F77B4F6 /* AVGeoPoint.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVGeoPoint.h; sourceTree = "<group>"; };
+		6911BECA35E7518D864239B7E898EEF3 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		6C73DBC6BDEE5022C49F5B7BBE7F7A95 /* AVHistoryMessageQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVHistoryMessageQuery.h; sourceTree = "<group>"; };
+		6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6FB47201E433504650917163250C0CEF /* SWUtilityButtonView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWUtilityButtonView.m; path = SWTableViewCell/PodFiles/SWUtilityButtonView.m; sourceTree = "<group>"; };
+		6FE72C1ECBA893509908297B8AE1E4E5 /* AVIMCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVIMCommon.h; sourceTree = "<group>"; };
+		74A5410E3159F44D1D8A7286CE01716A /* SWCellScrollView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWCellScrollView.h; path = SWTableViewCell/PodFiles/SWCellScrollView.h; sourceTree = "<group>"; };
+		777C0B20A3FB9ABBD617BF769D0E8F1E /* AVIMTextMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVIMTextMessage.h; sourceTree = "<group>"; };
+		77BE692C0FCBC4DFE03E8FBCE4C077A1 /* AVAvailability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVAvailability.h; sourceTree = "<group>"; };
+		77D862F0D422CB6CB1F46869E2653934 /* JVFloatLabeledTextField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JVFloatLabeledTextField.xcconfig; sourceTree = "<group>"; };
+		7AE75E1959E96BFFAE7D2D5217C87DDD /* JVFloatLabeledTextField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JVFloatLabeledTextField.h; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextField.h; sourceTree = "<group>"; };
+		7E530088138CFCA0DE09520A9E04FFB0 /* AVUser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVUser.h; sourceTree = "<group>"; };
+		8258A5B437A766D3FB5B5876FD215685 /* JVFloatLabeledTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JVFloatLabeledTextView.h; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextView.h; sourceTree = "<group>"; };
+		885B07EF21EE4565FAB840EB2A28A44E /* libAVOSCloudCrashReporting.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libAVOSCloudCrashReporting.a; sourceTree = "<group>"; };
+		8C3669CFA5EA56587BE47BD87EA58668 /* AVIMFileMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVIMFileMessage.h; sourceTree = "<group>"; };
+		8C8911DFD41E92CFC2DCAD493CCE706F /* SWTableViewCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SWTableViewCell-prefix.pch"; sourceTree = "<group>"; };
+		8DF8E0660181737682E2EB24CD7411D0 /* libSWTableViewCell.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSWTableViewCell.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9847EE21FAA30F58DB4C23B7D36BA212 /* libAVOSCloud.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libAVOSCloud.a; sourceTree = "<group>"; };
+		98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		9BB097A88D6FC2149639B24574F2F390 /* libJVFloatLabeledTextField.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJVFloatLabeledTextField.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E256B7CB32CD3E34E50F5F55865B702 /* SWCellScrollView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWCellScrollView.m; path = SWTableViewCell/PodFiles/SWCellScrollView.m; sourceTree = "<group>"; };
+		A1A36D34413696BE466E2CA0AFF194DA /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		A24A1D750C396F2FAE52BDEBEACCDDD0 /* AVCloudQueryResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVCloudQueryResult.h; sourceTree = "<group>"; };
+		A29768C4A65E815C39B9C7523D91839F /* SWTableViewCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SWTableViewCell.xcconfig; sourceTree = "<group>"; };
+		A43F2EF24751B76820E66DE1E61999E7 /* AVIMConversationQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVIMConversationQuery.h; sourceTree = "<group>"; };
+		A832B47293643ED0AAF5912EF4F2226A /* VPImageCropperViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = VPImageCropperViewController.h; path = VPImageCropperDemo/VPImageCropper/VPImageCropperViewController.h; sourceTree = "<group>"; };
+		ADBC812019A8D6B0BA6C748C267D79C4 /* SWLongPressGestureRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWLongPressGestureRecognizer.h; path = SWTableViewCell/PodFiles/SWLongPressGestureRecognizer.h; sourceTree = "<group>"; };
+		B243F134931CD93C5C0BE7BEE99CF6BE /* AVFileQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVFileQuery.h; sourceTree = "<group>"; };
+		B3A3EC514AD080BC432FEDDAA4A26932 /* SWLongPressGestureRecognizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWLongPressGestureRecognizer.m; path = SWTableViewCell/PodFiles/SWLongPressGestureRecognizer.m; sourceTree = "<group>"; };
+		B552DAC0046DEE7080FFCBEA4F68DF8C /* AVSearchQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVSearchQuery.h; sourceTree = "<group>"; };
+		B7C59508BA160D3FD73D5CE818366BAE /* AVIMAvailability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVIMAvailability.h; sourceTree = "<group>"; };
+		B86457E2C69D2BBB0C6333ED207E0E76 /* AVQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVQuery.h; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BC90C38EAC9B4BFD5C28F6F456F23173 /* AVHistoryMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVHistoryMessage.h; sourceTree = "<group>"; };
+		C106C468394389BEF5D90377FE45543E /* VPImageCropper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VPImageCropper.xcconfig; sourceTree = "<group>"; };
+		C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		C57A343D6AD5F87AB0326BE5F13FA0E4 /* SWTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWTableViewCell.h; path = SWTableViewCell/PodFiles/SWTableViewCell.h; sourceTree = "<group>"; };
+		C596B1CB7A899EC109EC69F24EB9CCF4 /* VPImageCropperViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = VPImageCropperViewController.m; path = VPImageCropperDemo/VPImageCropper/VPImageCropperViewController.m; sourceTree = "<group>"; };
+		C6B8CCD3DF71EE7904B367681804B2D6 /* AVIMImageMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVIMImageMessage.h; sourceTree = "<group>"; };
+		C9C3243B8C8ECC72F2A6A52DDD4F0110 /* AVSignature.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVSignature.h; sourceTree = "<group>"; };
+		CA287164577DA6B38C7E50BFCF585F39 /* SWTableViewCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SWTableViewCell-dummy.m"; sourceTree = "<group>"; };
+		CAE93F782AC22E4F5961B9C2656F005E /* AVRole.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVRole.h; sourceTree = "<group>"; };
+		CB870A5A07B2B3CCCE19D9A4581980D3 /* AVFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVFile.h; sourceTree = "<group>"; };
+		CBE9F0D9E43FA8431A45700275272295 /* AVSubclassing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVSubclassing.h; sourceTree = "<group>"; };
+		D7D75FC59E22D5E9C827794D0AA09A52 /* SWUtilityButtonTapGestureRecognizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SWUtilityButtonTapGestureRecognizer.h; path = SWTableViewCell/PodFiles/SWUtilityButtonTapGestureRecognizer.h; sourceTree = "<group>"; };
+		DC932F6D4C2EA73CA99BB3FD4072E0D0 /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SWUtilityButtonTapGestureRecognizer.m; path = SWTableViewCell/PodFiles/SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
+		DF6C97B17B736F3DA07CE9603F97F6F1 /* VPImageCropper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VPImageCropper-dummy.m"; sourceTree = "<group>"; };
+		DFE799B0C9938B8EF268E2C727F45341 /* AVOSCloud.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVOSCloud.h; sourceTree = "<group>"; };
+		E3FC0CF1D9319D7CD0B7C8DE4AAF6C3E /* AVSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVSession.h; sourceTree = "<group>"; };
+		E5219035E2F4D5442032CC68F24F2271 /* AVACL.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVACL.h; sourceTree = "<group>"; };
+		E97B0E745F643A1E148C52A42AED6129 /* AVIMAudioMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVIMAudioMessage.h; sourceTree = "<group>"; };
+		EB52746BE0B30EDD7045939331A64709 /* AVSaveOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVSaveOption.h; sourceTree = "<group>"; };
+		EC89D2A7D49673BC43BA27654E92070F /* AVIMClientOpenOption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVIMClientOpenOption.h; sourceTree = "<group>"; };
+		EF91844632391B2E81E5DB30223446F2 /* AVObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVObject.h; sourceTree = "<group>"; };
+		F505B6E8601BAE63D7D5570DE4D21446 /* NSString+TextDirectionality.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+TextDirectionality.h"; path = "JVFloatLabeledTextField/JVFloatLabeledTextField/NSString+TextDirectionality.h"; sourceTree = "<group>"; };
+		F591650FB3236057218AA493C15D7759 /* AVSearchSortBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVSearchSortBuilder.h; sourceTree = "<group>"; };
+		F5F863A4AC9A8EC0CE30052EF3211083 /* AVGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVGroup.h; sourceTree = "<group>"; };
+		F6B644B8ABF02812D83993089180F094 /* JVFloatLabeledTextField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JVFloatLabeledTextField.m; path = JVFloatLabeledTextField/JVFloatLabeledTextField/JVFloatLabeledTextField.m; sourceTree = "<group>"; };
+		F7F3921137E3B7F44B45B55446C2B224 /* AVAnalytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = AVAnalytics.h; sourceTree = "<group>"; };
+		F9964A1F1D885D64D6A96C34504B7018 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14C8412D7D5A7EC769E565C972357C49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C6134384BA59B9B8D5E34CC3861DDAF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		251F2A2157DE11235A352CEEDD5C2F12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F4BCC738A286E6442D11E1E7E46C94C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8C3B643E4451C0CA25C73FCE3CA5D090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40AA06B89210999356E0D2E03478E584 /* Foundation.framework in Frameworks */,
+				994C714EFB8B3AD6518C9EA43A276402 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFA8A2BF85597D87918FEC94A7FF1E79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6386CB1F64CDCBAB347BE7E0947E63DA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00A1459FDA8D9E9A35CAD7CA48379D37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9847EE21FAA30F58DB4C23B7D36BA212 /* libAVOSCloud.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		037C0CA694176A3C0915F62C9D20B3E6 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3D1D13E0C6553800746CB8FD61CF946 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		1278C779495D2FFF17811E93FADA0AF1 /* JVFloatLabeledTextField */ = {
+			isa = PBXGroup;
+			children = (
+				7AE75E1959E96BFFAE7D2D5217C87DDD /* JVFloatLabeledTextField.h */,
+				F6B644B8ABF02812D83993089180F094 /* JVFloatLabeledTextField.m */,
+				8258A5B437A766D3FB5B5876FD215685 /* JVFloatLabeledTextView.h */,
+				4077AB1F49E1F513D99DB33DCD7176F7 /* JVFloatLabeledTextView.m */,
+				F505B6E8601BAE63D7D5570DE4D21446 /* NSString+TextDirectionality.h */,
+				46DEE8E536B300FDE6D85A88A262D4F8 /* NSString+TextDirectionality.m */,
+				2164311639AA05DCE8479C368B84C279 /* Support Files */,
+			);
+			path = JVFloatLabeledTextField;
+			sourceTree = "<group>";
+		};
+		153097030E92E53CBAFC2FF94B832D28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5346112F5117C19B2167093A0F1A09B0 /* libAVOSCloudIM.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18340F12838DEE43507667CC74401EB1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6E7E5AF37923BFA48D6994B9BFC6535F /* Foundation.framework */,
+				C3B7BDF5CE5CB8F095FE12DA55D9A9BB /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		20B3BC405007CEAA1C08750874985819 /* AVOSCloudCrashReporting */ = {
+			isa = PBXGroup;
+			children = (
+				01B5AB97929BA2E132FAA939E9BB4A23 /* AVOSCloudCrashReporting.h */,
+				2EF9504EAD1427181E26306EB4705E3C /* Frameworks */,
+			);
+			path = AVOSCloudCrashReporting;
+			sourceTree = "<group>";
+		};
+		2164311639AA05DCE8479C368B84C279 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				77D862F0D422CB6CB1F46869E2653934 /* JVFloatLabeledTextField.xcconfig */,
+				32AA5CD8665C0FB1CF88C84BDCBEA6C4 /* JVFloatLabeledTextField-dummy.m */,
+				380D4B8796BFBB175D323229D0D84BB9 /* JVFloatLabeledTextField-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/JVFloatLabeledTextField";
+			sourceTree = "<group>";
+		};
+		2EF9504EAD1427181E26306EB4705E3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				885B07EF21EE4565FAB840EB2A28A44E /* libAVOSCloudCrashReporting.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		40CA55FA47B32D10B210B6F459AA2C3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9BB097A88D6FC2149639B24574F2F390 /* libJVFloatLabeledTextField.a */,
+				F9964A1F1D885D64D6A96C34504B7018 /* libPods.a */,
+				8DF8E0660181737682E2EB24CD7411D0 /* libSWTableViewCell.a */,
+				18F38A1EAA9AB08FE0056D65C1F93DEA /* libVPImageCropper.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				18340F12838DEE43507667CC74401EB1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5FE7C4D1E803EDD2501C21F6C93D051A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D2B5A027487D7BFF874B360409537FD2 /* AVOSCloud */,
+				20B3BC405007CEAA1C08750874985819 /* AVOSCloudCrashReporting */,
+				96A26C86259238B112837C7DE8D4AAC1 /* AVOSCloudIM */,
+				1278C779495D2FFF17811E93FADA0AF1 /* JVFloatLabeledTextField */,
+				C4E04CEBBF023AD69596428FD2CE889E /* SWTableViewCell */,
+				BC7C1FD21FF539B8939B89E2DC987479 /* VPImageCropper */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6AD3CB63D9F370AE017437253E806D94 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C106C468394389BEF5D90377FE45543E /* VPImageCropper.xcconfig */,
+				DF6C97B17B736F3DA07CE9603F97F6F1 /* VPImageCropper-dummy.m */,
+				54AEA457038D9130E0A8073A87C0618C /* VPImageCropper-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/VPImageCropper";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				5FE7C4D1E803EDD2501C21F6C93D051A /* Pods */,
+				40CA55FA47B32D10B210B6F459AA2C3E /* Products */,
+				037C0CA694176A3C0915F62C9D20B3E6 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		96A26C86259238B112837C7DE8D4AAC1 /* AVOSCloudIM */ = {
+			isa = PBXGroup;
+			children = (
+				E97B0E745F643A1E148C52A42AED6129 /* AVIMAudioMessage.h */,
+				B7C59508BA160D3FD73D5CE818366BAE /* AVIMAvailability.h */,
+				5C3FCF3A43E8ADB08E681F150FFCBF13 /* AVIMClient.h */,
+				EC89D2A7D49673BC43BA27654E92070F /* AVIMClientOpenOption.h */,
+				6FE72C1ECBA893509908297B8AE1E4E5 /* AVIMCommon.h */,
+				50C3AC35D077A0666602EB2C2F9B9CC5 /* AVIMConversation.h */,
+				A43F2EF24751B76820E66DE1E61999E7 /* AVIMConversationQuery.h */,
+				190BDC51182DC5633F248D533D4F5A60 /* AVIMConversationUpdateBuilder.h */,
+				8C3669CFA5EA56587BE47BD87EA58668 /* AVIMFileMessage.h */,
+				C6B8CCD3DF71EE7904B367681804B2D6 /* AVIMImageMessage.h */,
+				061F5E129D211ED09F2FE0C52A9BBCD4 /* AVIMKeyedConversation.h */,
+				637C6C2CE5CD7142CC133CAB536A50E6 /* AVIMLocationMessage.h */,
+				3C288E709D0FD78076ACCB9495DF7DFE /* AVIMMessage.h */,
+				3EE9039403C28C4D8C973094EA1FA119 /* AVIMSignature.h */,
+				777C0B20A3FB9ABBD617BF769D0E8F1E /* AVIMTextMessage.h */,
+				5D40C7E311236ADC6AA3F2CF7BF6C9E0 /* AVIMTypedMessage.h */,
+				175A31BF0CBF9E7DA42F566474F5FC3E /* AVIMUserOptions.h */,
+				2CA323B26B5C00C7EC0D3ED1D3E13BB8 /* AVIMVideoMessage.h */,
+				3C93D979466A67340EF631EECC275AC0 /* AVOSCloudIM.h */,
+				153097030E92E53CBAFC2FF94B832D28 /* Frameworks */,
+			);
+			path = AVOSCloudIM;
+			sourceTree = "<group>";
+		};
+		B3D1D13E0C6553800746CB8FD61CF946 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				37DB56D75062CC75FCB0966E1C6E8A8E /* Pods-acknowledgements.markdown */,
+				10834806BD7B412BC24F347361FA2C8E /* Pods-acknowledgements.plist */,
+				272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */,
+				6911BECA35E7518D864239B7E898EEF3 /* Pods-frameworks.sh */,
+				A1A36D34413696BE466E2CA0AFF194DA /* Pods-resources.sh */,
+				4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */,
+				98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		BC7C1FD21FF539B8939B89E2DC987479 /* VPImageCropper */ = {
+			isa = PBXGroup;
+			children = (
+				A832B47293643ED0AAF5912EF4F2226A /* VPImageCropperViewController.h */,
+				C596B1CB7A899EC109EC69F24EB9CCF4 /* VPImageCropperViewController.m */,
+				6AD3CB63D9F370AE017437253E806D94 /* Support Files */,
+			);
+			path = VPImageCropper;
+			sourceTree = "<group>";
+		};
+		C4E04CEBBF023AD69596428FD2CE889E /* SWTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				59A5AA0332D1E75EA8CE064A03E4FC81 /* NSMutableArray+SWUtilityButtons.h */,
+				43EBC3DE92B0CC9A7FDF748BB8AC8C6F /* NSMutableArray+SWUtilityButtons.m */,
+				74A5410E3159F44D1D8A7286CE01716A /* SWCellScrollView.h */,
+				9E256B7CB32CD3E34E50F5F55865B702 /* SWCellScrollView.m */,
+				ADBC812019A8D6B0BA6C748C267D79C4 /* SWLongPressGestureRecognizer.h */,
+				B3A3EC514AD080BC432FEDDAA4A26932 /* SWLongPressGestureRecognizer.m */,
+				C57A343D6AD5F87AB0326BE5F13FA0E4 /* SWTableViewCell.h */,
+				069CEB8EE1B39A0E10FFBD819E4166C4 /* SWTableViewCell.m */,
+				D7D75FC59E22D5E9C827794D0AA09A52 /* SWUtilityButtonTapGestureRecognizer.h */,
+				DC932F6D4C2EA73CA99BB3FD4072E0D0 /* SWUtilityButtonTapGestureRecognizer.m */,
+				30CDDB875A4EF31DFF0A2CC98BBEDD86 /* SWUtilityButtonView.h */,
+				6FB47201E433504650917163250C0CEF /* SWUtilityButtonView.m */,
+				DD249750554784491FDD4FAE047569D1 /* Support Files */,
+			);
+			path = SWTableViewCell;
+			sourceTree = "<group>";
+		};
+		D2B5A027487D7BFF874B360409537FD2 /* AVOSCloud */ = {
+			isa = PBXGroup;
+			children = (
+				E5219035E2F4D5442032CC68F24F2271 /* AVACL.h */,
+				F7F3921137E3B7F44B45B55446C2B224 /* AVAnalytics.h */,
+				377916D8FA1BB93CB2D5237D6C070678 /* AVAnonymousUtils.h */,
+				77BE692C0FCBC4DFE03E8FBCE4C077A1 /* AVAvailability.h */,
+				1529998480FD065297B734C96F4A596D /* AVCloud.h */,
+				A24A1D750C396F2FAE52BDEBEACCDDD0 /* AVCloudQueryResult.h */,
+				0D00F12612D6789A41162A613808FF4F /* AVConstants.h */,
+				CB870A5A07B2B3CCCE19D9A4581980D3 /* AVFile.h */,
+				B243F134931CD93C5C0BE7BEE99CF6BE /* AVFileQuery.h */,
+				63E0C27D201FF0358C9729E68F77B4F6 /* AVGeoPoint.h */,
+				F5F863A4AC9A8EC0CE30052EF3211083 /* AVGroup.h */,
+				BC90C38EAC9B4BFD5C28F6F456F23173 /* AVHistoryMessage.h */,
+				6C73DBC6BDEE5022C49F5B7BBE7F7A95 /* AVHistoryMessageQuery.h */,
+				0FA500563D4B2E47E1FE0425F7F998F0 /* AVInstallation.h */,
+				4DA67E920B3C8E3D1A07B1965D11DD55 /* AVLogger.h */,
+				58A385EC159005F9D1DE86F14CE12BF3 /* AVMessage.h */,
+				EF91844632391B2E81E5DB30223446F2 /* AVObject.h */,
+				051D5156948CD6C99D8DE576F65C81DA /* AVObject+Subclass.h */,
+				DFE799B0C9938B8EF268E2C727F45341 /* AVOSCloud.h */,
+				514797DB67D4AB0BB4A079561544B83B /* AVPush.h */,
+				B86457E2C69D2BBB0C6333ED207E0E76 /* AVQuery.h */,
+				35141CDA111D0564F00350D74EC5CF6D /* AVRelation.h */,
+				CAE93F782AC22E4F5961B9C2656F005E /* AVRole.h */,
+				EB52746BE0B30EDD7045939331A64709 /* AVSaveOption.h */,
+				B552DAC0046DEE7080FFCBEA4F68DF8C /* AVSearchQuery.h */,
+				F591650FB3236057218AA493C15D7759 /* AVSearchSortBuilder.h */,
+				E3FC0CF1D9319D7CD0B7C8DE4AAF6C3E /* AVSession.h */,
+				C9C3243B8C8ECC72F2A6A52DDD4F0110 /* AVSignature.h */,
+				4FDE2886EECDC0CA3611D1F1014643EF /* AVStatus.h */,
+				CBE9F0D9E43FA8431A45700275272295 /* AVSubclassing.h */,
+				7E530088138CFCA0DE09520A9E04FFB0 /* AVUser.h */,
+				00A1459FDA8D9E9A35CAD7CA48379D37 /* Frameworks */,
+			);
+			path = AVOSCloud;
+			sourceTree = "<group>";
+		};
+		DD249750554784491FDD4FAE047569D1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A29768C4A65E815C39B9C7523D91839F /* SWTableViewCell.xcconfig */,
+				CA287164577DA6B38C7E50BFCF585F39 /* SWTableViewCell-dummy.m */,
+				8C8911DFD41E92CFC2DCAD493CCE706F /* SWTableViewCell-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SWTableViewCell";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2AB03CCA1077C149FD6671EFCD64C3AB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFF5177687FB45610BF82F645C636DFA /* JVFloatLabeledTextField.h in Headers */,
+				8C3C27FFD4B270EC7E8AF5E7C4051A09 /* JVFloatLabeledTextView.h in Headers */,
+				499E5A5E8F45A0E6FC10DBAB17BBB66E /* NSString+TextDirectionality.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38F44BCE75BA1C7C17E0D307D93926DA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A14FA03AF32EB0C04616AD8C1DA2B2EF /* NSMutableArray+SWUtilityButtons.h in Headers */,
+				D0DD0BB9DC8C131D79C13DA779EC1537 /* SWCellScrollView.h in Headers */,
+				349E43E0DC50CD1FFC14CFE489152E17 /* SWLongPressGestureRecognizer.h in Headers */,
+				F231374B661B4C8822B8E070B4C9901E /* SWTableViewCell.h in Headers */,
+				1FBFB029C80674D8A9468913B8FF5569 /* SWUtilityButtonTapGestureRecognizer.h in Headers */,
+				E5E68569F24C5289E1041A5FEAFF1F33 /* SWUtilityButtonView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B5AAF925E3B4B60FE662A01E0778005 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFA65F590704DF284A70EF1EF8E4EBC5 /* VPImageCropperViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		266E27D897FD7FD68078059CF4D7455F /* JVFloatLabeledTextField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F17BDC6FC1B950393098EDD292C09ECF /* Build configuration list for PBXNativeTarget "JVFloatLabeledTextField" */;
+			buildPhases = (
+				313DB931CE985F1211597D142EEB3C8B /* Sources */,
+				8C3B643E4451C0CA25C73FCE3CA5D090 /* Frameworks */,
+				2AB03CCA1077C149FD6671EFCD64C3AB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JVFloatLabeledTextField;
+			productName = JVFloatLabeledTextField;
+			productReference = 9BB097A88D6FC2149639B24574F2F390 /* libJVFloatLabeledTextField.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3B8E8ECD4C4D9F000FC8EB52208DAC73 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00018AAB7283CF36DBFAA1888CA8FC45 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				A65C8574154E2D6D828F0C59F22A2468 /* Sources */,
+				14C8412D7D5A7EC769E565C972357C49 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BAEB56778080552CED00DC0504D9B9E /* PBXTargetDependency */,
+				77DD7E78612C8FE8B27E42FC2D4D26CB /* PBXTargetDependency */,
+				ADE5C9FDF0F26BE41C6C344F92B5DA03 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = F9964A1F1D885D64D6A96C34504B7018 /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B5DF6B2B638BD451921A359066CB9E21 /* VPImageCropper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22A978F17C5E6416BD609647B5C3948E /* Build configuration list for PBXNativeTarget "VPImageCropper" */;
+			buildPhases = (
+				5C8050477C7ADBF57BACB1F8CC9E270C /* Sources */,
+				EFA8A2BF85597D87918FEC94A7FF1E79 /* Frameworks */,
+				6B5AAF925E3B4B60FE662A01E0778005 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VPImageCropper;
+			productName = VPImageCropper;
+			productReference = 18F38A1EAA9AB08FE0056D65C1F93DEA /* libVPImageCropper.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E2DAAC89F92C5F154DDFF312709BDB3A /* SWTableViewCell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1472279B54A6EFC7C1418AF3AD600A17 /* Build configuration list for PBXNativeTarget "SWTableViewCell" */;
+			buildPhases = (
+				5A7FD78B41EDA83B0F5E90020DC31E4E /* Sources */,
+				251F2A2157DE11235A352CEEDD5C2F12 /* Frameworks */,
+				38F44BCE75BA1C7C17E0D307D93926DA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SWTableViewCell;
+			productName = SWTableViewCell;
+			productReference = 8DF8E0660181737682E2EB24CD7411D0 /* libSWTableViewCell.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 40CA55FA47B32D10B210B6F459AA2C3E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				266E27D897FD7FD68078059CF4D7455F /* JVFloatLabeledTextField */,
+				3B8E8ECD4C4D9F000FC8EB52208DAC73 /* Pods */,
+				E2DAAC89F92C5F154DDFF312709BDB3A /* SWTableViewCell */,
+				B5DF6B2B638BD451921A359066CB9E21 /* VPImageCropper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		313DB931CE985F1211597D142EEB3C8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				740275241245444929B51C5C824BC87F /* JVFloatLabeledTextField-dummy.m in Sources */,
+				0F5B6AC14F58EABEB001C30A452D5268 /* JVFloatLabeledTextField.m in Sources */,
+				1E04E83623789E01EB3D44E0864941E5 /* JVFloatLabeledTextView.m in Sources */,
+				75B9287485714913A1A259FEA70BE606 /* NSString+TextDirectionality.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A7FD78B41EDA83B0F5E90020DC31E4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC17971970F79575A8EA971FD26D5B88 /* NSMutableArray+SWUtilityButtons.m in Sources */,
+				BED7D1E5DB4613CE71F1840FC765C681 /* SWCellScrollView.m in Sources */,
+				773B18D7343A68211B65EB814FE2E036 /* SWLongPressGestureRecognizer.m in Sources */,
+				954A318C9D02501B4B6E907C975B89FA /* SWTableViewCell-dummy.m in Sources */,
+				A0D8F113C8D9706FC4903C0AE3CB40D8 /* SWTableViewCell.m in Sources */,
+				782F2C7A8482211B01E1D5D015E552E9 /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
+				AA913D9430D7B2B0B2CEB8CB3EA33E9B /* SWUtilityButtonView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C8050477C7ADBF57BACB1F8CC9E270C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB2B729213A29A310A3ECA1C9C8C2BCF /* VPImageCropper-dummy.m in Sources */,
+				C8352FBCCC20A58BB0711D149E9355EA /* VPImageCropperViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A65C8574154E2D6D828F0C59F22A2468 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AEBC23B44A602A20B8467D2714CAC6A /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5BAEB56778080552CED00DC0504D9B9E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JVFloatLabeledTextField;
+			target = 266E27D897FD7FD68078059CF4D7455F /* JVFloatLabeledTextField */;
+			targetProxy = 1CEC308C6CE9D4915D69221DB4831F1A /* PBXContainerItemProxy */;
+		};
+		77DD7E78612C8FE8B27E42FC2D4D26CB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SWTableViewCell;
+			target = E2DAAC89F92C5F154DDFF312709BDB3A /* SWTableViewCell */;
+			targetProxy = 0967AE0BA3F859DAA86706B3C4132670 /* PBXContainerItemProxy */;
+		};
+		ADE5C9FDF0F26BE41C6C344F92B5DA03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VPImageCropper;
+			target = B5DF6B2B638BD451921A359066CB9E21 /* VPImageCropper */;
+			targetProxy = 9019F8E4CCB699563674A028F9FC0A6E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		21DD4E79B0DCBFC6866057BCDC2F7D6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		244A440CE7E8DE701AA881E882220325 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A29768C4A65E815C39B9C7523D91839F /* SWTableViewCell.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SWTableViewCell/SWTableViewCell-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		26DDA8C6A25CDA26B03455F0F481B2C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77D862F0D422CB6CB1F46869E2653934 /* JVFloatLabeledTextField.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JVFloatLabeledTextField/JVFloatLabeledTextField-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		4E7D41BB0E61BD26CED78C64342E0613 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6AE3A38ED147B49EC14A7B3FE4FD699A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C106C468394389BEF5D90377FE45543E /* VPImageCropper.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/VPImageCropper/VPImageCropper-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8D748BA6C6006D27EDF6617F276A99F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C106C468394389BEF5D90377FE45543E /* VPImageCropper.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/VPImageCropper/VPImageCropper-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C074F63C9EE7CB4D8C618390A32CEC35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C850D68E86444D4FC937896006E80235 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77D862F0D422CB6CB1F46869E2653934 /* JVFloatLabeledTextField.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/JVFloatLabeledTextField/JVFloatLabeledTextField-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		E43846B588E1892F3093F3B7082B6DFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F6B4B931061E527612D39641BBC81501 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A29768C4A65E815C39B9C7523D91839F /* SWTableViewCell.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SWTableViewCell/SWTableViewCell-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00018AAB7283CF36DBFAA1888CA8FC45 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E7D41BB0E61BD26CED78C64342E0613 /* Debug */,
+				21DD4E79B0DCBFC6866057BCDC2F7D6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1472279B54A6EFC7C1418AF3AD600A17 /* Build configuration list for PBXNativeTarget "SWTableViewCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				244A440CE7E8DE701AA881E882220325 /* Debug */,
+				F6B4B931061E527612D39641BBC81501 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22A978F17C5E6416BD609647B5C3948E /* Build configuration list for PBXNativeTarget "VPImageCropper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AE3A38ED147B49EC14A7B3FE4FD699A /* Debug */,
+				8D748BA6C6006D27EDF6617F276A99F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C074F63C9EE7CB4D8C618390A32CEC35 /* Debug */,
+				E43846B588E1892F3093F3B7082B6DFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F17BDC6FC1B950393098EDD292C09ECF /* Build configuration list for PBXNativeTarget "JVFloatLabeledTextField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26DDA8C6A25CDA26B03455F0F481B2C6 /* Debug */,
+				C850D68E86444D4FC937896006E80235 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

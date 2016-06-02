@@ -1,0 +1,2 @@
+/Users/Grandre/Library/Developer/Xcode/DerivedData/GoBook-deyiszohkuhohvaqlthophbrusov/Build/Products/Debug-iphonesimulator/GoBook.app
+iPhone Developer

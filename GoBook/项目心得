@@ -1,0 +1,313 @@
+//////
+待实现
+登录界面 输入栏的滚动 storyboard中实现。
+///////////
+添加字体
+1：将字体文件添加进项目
+2：在项目配置的build Phrase的copy bundle resources添加刚刚的字体文件
+3：在info.plist文件中添加新的一行叫Fonts provided by application。
+    这是一个数组，数组添加刚刚的字体文件。eg：隶变体.ttf
+4：获取在项目代码中引用时用到的名字，eg：在finder中打开字体ttf，标题显示是Bauhaus ITC。
+    btn1.titleLabel?.font = UIFont(name: "Bauhaus ITC", size: 18)
+
+///////////
+工厂模式的理解和应用：减少重复性代码，根据不同要求的输入，得出不同的输出。
+
+let cell = UITableViewCell(style: .Value1, reuseIdentifier: "cell")
+//        下面这种引用方法是自定义的cell
+//        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
+
+///////////
+采用闭包回调时，闭包实质上是一种类型，如果没有采用typealias，则不能直接var 变量 = (titile:String)->Void
+因为闭包只是一个函数类型。
+typealias TextfieldValueCallBack = (title:String)->Void
+var TitleValueCallBack:TextfieldValueCallBack?
+self.TitleValueCallBack!(title:(self.titleTextField?.text)!)
+
+在另一控制器中，也一般是父控制器中，可以用闭包的形式捕获。
+vc.TitleValueCallBack = {(string) in self.Book_Title = string
+self.tableView?.reloadData()
+也可以在父控制器中定义一个函数，再将此函数赋值给vc.TitleValueCallBack。本质和闭包一样。
+
+//////////
+数组的增加
+arr.append  在尾部添加
+arr += []   在尾部添加
+arr.insert  在指定位置添加
+
+
+////////
+内存管理
+swift中闭包的使用不会循环引用的
+swift采用ARC。但并不代表不会内存泄露。
+检查内存泄露方法
+deinit{
+print("pushNewBookController reallse")
+}
+如果成功析构，则没有内存泄露。
+如果没有析构，没打印那句话，则表明内存泄露了。
+
+protocol必须声明弱引用。delegate声明成变量时，在前面加上weak。
+
+如果是swift协议，非oc协议，则需要把协议继承class，才能在delegate变量前面加weak关键字
+protocol BookTabBarDelegate:class{
+func comment()
+func commentController()
+func likeBook(btn:UIButton)
+func shareAction()
+}
+
+class BookTabBar: UIView {
+weak var delegate:BookTabBarDelegate?
+}
+
+
+//////////
+从storyboard中获取控制器
+摘自Parse操练项目
+第一种：let editProfile = self.storyboard?.instantiateViewControllerWithIdentifier("EditProfileViewController") as! EditProfileViewController
+editProfile.opener = self
+let editProfileNav = UINavigationController(rootViewController: editProfile )
+self.presentViewController(editProfileNav, animated: true, completion: nil)
+第二种：let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+let main: MainViewController = mainStoryBoard.instantiateViewControllerWithIdentifier("MainViewController") as! MainViewController
+
+////////////
+让没有内容的线条消失
+tableView?.tableFooterView = UIView()
+
+
+////////
+键盘遮挡可以用Xkeyboard库
+
+////////
+控制器之间，视图之间的数据传输可以用delegate，闭包，准代理等
+不同线程之间的数据传输一般用NSNotification
+
+//////////
+UIImageJPEGRepresentation函数需要两个参数:图片的引用和压缩系数.而UIImagePNGRepresentation只需要图片引用作为参数.通过在实际使用过程中,比较发现: UIImagePNGRepresentation(UIImage* image) 要比UIImageJPEGRepresentation(UIImage* image, 1.0) 返回的图片数据量大很多.譬如,同样是读取摄像头拍摄的同样景色的照片, UIImagePNGRepresentation()返回的数据量大小为199K ,而 UIImageJPEGRepresentation(UIImage* image, 1.0)返回的数据量大小只为140KB,比前者少了50多KB.如果对图片的清晰度要求不高,还可以通过设置 UIImageJPEGRepresentation函数的第二个参数,大幅度降低图片数据量.譬如,刚才拍摄的图片, 通过调用UIImageJPEGRepresentation(UIImage* image, 1.0)读取数据时,返回的数据大小为140KB,但更改压缩系数后,通过调用UIImageJPEGRepresentation(UIImage* image, 0.5)读取数据时,返回的数据大小只有11KB多,大大压缩了图片的数据量 ,而且从视角角度看,图片的质量并没有明显的降低.因此,在读取图片数据内容时,建议优先使用UIImageJPEGRepresentation,并可根据自己的实际使用场景,设置压缩系数,进一步降低图片数据量大小.
+////////
+如果使用的name为系统的宏，则后面的object区分发送者是无效的，跟nil无区别。
+NSNotificationCenter.defaultCenter().addObserver(self, selector: "textfieldValueChange:", name: UITextFieldTextDidChangeNotification, object:SecondTextFidld)
+
+
+如果使用自定的name，则object可以区别发送者，也即是可以起到过滤的作用。
+NSNotificationCenter.defaultCenter().addObserver(self, selector: "textfieldValueChange:", name: "textfieldValueChange", object:SecondTextFidld)
+
+func textfieldValueChange(notification:NSNotification){
+let field = notification.object as! UITextField
+label.text = field.text
+
+}
+
+如果发送通知者是控制器，则接受者在注册的时候object最好填nil，然后在selector去区别控制器
+NSNotificationCenter.defaultCenter().addObserver(self, selector: "textfieldValueChange:", name: "textfieldValueChange", object:nil)
+
+func textfieldValueChange(notification:NSNotification){
+        let field = notification.object as! SecondViewController
+        label.text = field.textField2.text
+
+
+////////////
+cell的纯代码自定义
+override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    super.init(style: style, reuseIdentifier: reuseIdentifier)
+        for view in self.contentView.subviews {
+        view.removeFromSuperview()
+        }
+}
+
+/////////////
+xcode7以后默认只支持HTTPS。如需支持HTTP，可在info.plist里添加一项
+App Transport Security Settings
+再将里面的Allow Arbitrary Loads 设置成YES
+
+//////////
+APP所有界面都公用一个navigationbar的，如果想在不同界面实现不同的navigationbar，可以分别自定义UIVIEW,再在对应界面的navigationbar上添加uiview。
+
+//////////
+研究：如果有导航条navigationbar的时候，滚动视图的自动下移问题
+http://www.tuicool.com/articles/FFJv2eF
+//下面一句可设置子视图下移至导航条下面
+vc.edgesForExtendedLayout = UIRectEdge.None
+
+/////////
+使导航条上的backItem的title消失（实际把它上移了）
+UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), forBarMetrics: .Default)
+
+/////////
+日期的格式显示
+let date = BookObject!["createdAt"] as! NSDate
+let format = NSDateFormatter()
+format.dateFormat = "yy-MM-dd"
+BookTitleView?.date?.text = format.stringFromDate(date)
+
+////////////
+UIVIEW自定义绘制线条，画面的时候，应该在这里绘制
+//    绘制的知识点
+override func drawRect(rect: CGRect) {
+let context = UIGraphicsGetCurrentContext()
+CGContextSetLineWidth(context, 0.5)
+CGContextSetRGBFillColor(context, 231/255, 231/255, 231/255, 1)
+CGContextMoveToPoint(context, 8, VIEW_HEIGHT - 2)
+CGContextAddLineToPoint(context, VIEW_WIDTH - 8, VIEW_HEIGHT - 2)
+CGContextStrokePath(context)
+}
+
+/////////
+取消cell的选中效果设置有两种方法
+1：cell?.selectionStyle  = .None
+2：func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    self.tableView?.deselectRowAtIndexPath(indexPath, animated: true)
+}
+
+//////////
+oc的delegate协议的话，在声明delegate变量的时候，要用weak前置声明，不然造成循环引用导致内存泄露。
+swift的delegate协议的话，则不用weak修饰delegate变量。
+
+ocdelegate协议的好处是里面的方法可以可选。
+
+@objc protocol BookTitleDelegate{
+optional func choiceCover()
+}
+
+weak var delegate:BookTitleDelegate?
+
+///////////
+校验文本框有没有输入任何东西
+var count = 0
+for i in (self.input?.inputTextView?.text.characters)!{
+if i == " "{
+count += 1
+}
+}
+if count == self.input?.inputTextView?.text.characters.count{
+print("没写东西或者都是空格")
+ProgressHUD.showError("没写什么哦", interaction: true)
+}else{
+
+///////////////
+leanCloud上保存的是指针，获取的时候再根据指针fetch一下
+let user = BookObject!["user"] as! AVUser
+user.fetchInBackgroundWithBlock { (avUser, error) -> Void in
+self.BookTitleView?.userName?.text = "编者：" + (avUser as! AVUser).username
+}
+
+第二种方法：用includeKey
+query.whereKey("user", equalTo: AVUser.currentUser())
+query.whereKey("BookObject", equalTo: self.BookObject)
+query.includeKey("user")
+query.includeKey("BookObject")
+
+
+////////////
+presentView的时候，是先执行目标VC的viewdidLoad中的代码
+pushView则不会。
+
+/////////
+未学会
+func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+let object = self.dataArray[indexPath.row] as? AVObject
+let text = object!["text"] as? NSString
+let textSize = text?.boundingRectWithSize(CGSizeMake(SCREEN_WIDTH-56-8,0), options: .UsesLineFragmentOrigin, attributes: [NSFontAttributeName:UIFont.systemFontOfSize(15)], context: nil).size
+
+return (textSize?.height)! + 30 + 25
+}
+
+http://blog.csdn.net/zhuzhihai1988/article/details/17387319
+
+
+//////////////
+shareSDK使用步骤
+1.在shareSDK官网登录并注册对应的应用。下载好相应的SDK。
+2.在项目文件中拖入下载好的SDK，并且添加相应的框架，build phases -> link binary with libraries 添加。找不到就在finder里找，command+shift+g，输入/usr/lib 直接跳转至目录查找。
+3.在bridging桥接文件里面添加相应的头文件
+4.在appdelegate中添加相应的代码，在响应方法中添加相应的代码
+//            SSDKPlatformType.TypeQQ.rawValue，
+//            SSDKPlatformType.TypeSinaWeibo.rawValue
+//            SSDKPlatformType.TypeWechat.rawValue包括微信好友，朋友圈，收藏夹
+//            SSDKPlatformType.SubTypeWechatSession.rawValue 微信好友
+//            SSDKPlatformType.SubTypeWechatTimeline.rawValue 朋友圈
+也可以在响应代码中的items参数传入
+ShareSDK.showShareActionSheet(self.view, items: nil, shareParams: shareParames)
+items:[22，23]枚举类型
+/**
+*  微信好友
+*/
+SSDKPlatformSubTypeWechatSession    = 22,
+/**
+*  微信朋友圈
+*/
+SSDKPlatformSubTypeWechatTimeline   = 23
+
+5.在微信开放平台登录并注册好对应的应用，审核通过后获取到appId和appSecret填入appdelegate中
+6.给app添加分享允许。进入项目配置info栏，最下面的URL Types添加一项
+identifier填写weixin 。url schemes填写微信开放平台对应app的appid。
+7.在infolist配置文件中添加新的字段LSApplicationQueriesSchemes ,里面再添加wechat和weixin
+
+//**
+*  @author 革码者, 16-05-26 09:05:18
+*  tabbarcontroller代码切换不同页面
+    http://www.cnblogs.com/smileEvday/archive/2012/05/20/UITabBarController.html
+*  let rootVC = UIApplication.sharedApplication().keyWindow?.rootViewController as! UITabBarController
+rootVC.selectedIndex = 0
+*/
+
+
+////////
+实践了uitableView group 多个section的代码构建方法
+
+///////
+导航栏上添加自定义button Btn
+rightBarBtn = UIBarButtonItem(title: "保存", style: .Plain, target: self, action: #selector(self.rightBtnTapped))
+self.navigationItem.setRightBarButtonItem(self.rightBarBtn, animated: true)
+
+//////////好像又是错的结论
+页面之间传值，A界面实例化B界面后，不要直接给B界面的UI控件传值，因为不管是push方式还是present方式，B界面的UI控件都还未初始化，所以应该在B界面定义一个中间变量，比如string类型的，A界面pushB界面之前将值传递给B的中间变量，这时候可以实现传值的要求。
+
+///////
+有导航栏时又要添加scrollView，必须要注意的事情
+//       一定一定要注意添加下面这句代码！！！
+//        self.edgesForExtendedLayout = UIRectEdge.None
+self.automaticallyAdjustsScrollViewInsets = false
+
+
+/////
+有滚动视图进行缩放时，退出界面重新进入时，缩放的图片可能不正常显示，所以！！！必须在界面退出时将缩放比例重新设置为1
+override func viewWillDisappear(animated: Bool) {
+self.touxiangImageScrollView?.zoomScale = 1
+print("-----view disappear")
+}
+
+不能正常显示的真正原因应该是 没有在viewDidLoad中用UIImageView(frame:)等类似的实例化方法去实例对象，而是直接uiimageView.image  = UIImage（）和 .frame = CGReckMake（）的方法去“实例”它。
+
+
+//////////
+保存相片到系统相册
+func saveImageToPhotoAlbum() {
+UIImageWriteToSavedPhotosAlbum((self.touxiangImage?.image)!, self, #selector(self.image(_:didFinishSavingWithError:contextInfo:)), nil)
+}
+func image(image: UIImage, didFinishSavingWithError: NSError?,contextInfo: AnyObject)
+{
+if didFinishSavingWithError != nil
+{
+print("error!")
+ProgressHUD.showError("保存失败")
+return
+}
+
+print("image was saved")
+ProgressHUD.showSuccess("保存成功")
+}
+
+///////////
+tabbar 的隐藏和弹出
+self.tabBarController?.tabBar.hidden = true
+
+case (0,0):
+let personInfoVC = personInfoViewController()
+personInfoVC.userTouXiang = self.userTouXiang
+personInfoVC.hidesBottomBarWhenPushed = true
+self.navigationController?.pushViewController(personInfoVC, animated: true)
+
+
